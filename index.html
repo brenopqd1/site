@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolbolbet - Todos os direitos reservados</title>
+    <style>
+        @font-face {
+            font-family: 'Dank Mono';
+            src: url('https://fonts.gstatic.com/s/dankmono/v4/cIf6Ma57qc0DIQRr2iE.ttf');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://th.bing.com/th/id/OIG3.u8hA.DJHSXbfuoaM4pJQ?w=1024&h=1024&rs=1&pid=ImgDetMain');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 1px 0; /* Reduz o padding superior e inferior */
+            text-align: center;
+            font-family: 'Dank Mono', monospace;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra de texto */
+            font-size: 24px; /* Diminui o tamanho da fonte */
+            margin: 0; /* Remova a margem */
+            animation: lightsMovement 10s ease-in-out infinite alternate; /* Adiciona animação */
+        }
+
+        @keyframes lightsMovement {
+            0% {
+                text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00, 0 0 90px #f00, 0 0 100px #f00, 0 0 150px #f00; /* Luzes coloridas */
+            }
+            100% {
+                text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f, 0 0 90px #00f, 0 0 100px #00f, 0 0 150px #00f; /* Luzes coloridas */
+            }
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Dank Mono', monospace; /* Aplica a fonte às categorias do menu */
+            margin: 0; /* Remove a margem */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px; /* Diminui a margem entre os itens do menu */
+            font-size: 18px; /* Tamanho da fonte das categorias */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: 10px auto; /* Ajusta a margem para o centro e adiciona espaço extra */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            position: relative;
+        }
+        .circle-link {
+            width: 100px; /* Tamanho reduzido */
+            height: 100px; /* Tamanho reduzido */
+            border-radius: 50%; /* Transforma em formato de círculo */
+            overflow: hidden; /* Oculta qualquer parte da imagem que saia do círculo */
+            position: absolute;
+            top: 150px; /* Distância do topo aumentada */
+            left: 20px; /* Distância da esquerda */
+        }
+        .circle-link img.tigrinho {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MENU INICIAL</h1>
+    </header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Cassino ao vivo</a>
+        <a href="#">Slot</a>
+        <a href="#">Depósito</a>
+        <a href="#">Sacar</a>
+        <a href="#">Contato</a>
+    </nav>
+    <div class="container">
+        <h2>Bem-vindo ao nosso site de Apostas!</h2>
+        <p>Faça suas apostas nos próximos eventos esportivos e acompanhe os resultados aqui.</p>
+        <div class="circle-link">
+            <a href="./tigrinho.html">
+                <img src="https://t.ctcdn.com.br/DJgOwUGBRe72VoIqnBrYS7M-k1U=/1024x576/smart/i831491.jpeg" alt="Link" class="tigrinho">
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

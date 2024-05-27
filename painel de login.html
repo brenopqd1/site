@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM VINDO A BET DA BOLBOLZETE</title>
+    <link href="https://fonts.googleapis.com/css?family=Sofia&effect=fire" rel="stylesheet">
+    <style>
+        @keyframes colorChange {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://th.bing.com/th/id/OIG4.PztEPfzhIU_hAmIbH97f?pid=ImgGn');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .panel {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            transition: transform 0.3s ease;
+        }
+
+        .panel:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgb(0, 0, 0); /* Adicionando a sombra quando o mouse está sobre o painel */
+            box-shadow: 0 0 20px rgb(5, 5, 5); /* Adicionando a sombra quando o mouse está sobre o painel */
+        }
+
+        .panel h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #000000b2;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b32929;
+            animation: pulse 2s infinite;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .background-text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Sofia', cursive;
+            animation: colorChange 5s infinite;
+            opacity: 0.85;
+            z-index: 10;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 14px;
+        }
+        .panel + .panel {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Painel de Login -->
+        <div class="panel" id="loginPanel">
+            <h2>BEM VINDO A BET DA BOLBOLZETE</h2>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-username">Usuário</label>
+                    <input type="text" id="login-username" placeholder="Digite seu usuário">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <div class="form-group"> <!-- Novo div para colocar o checkbox abaixo do botão -->
+                    <label for="risk-awareness" class="txt1">Tenho consciência dos riscos do site!</label>
+                    <input type="checkbox" class="caixa" id="risk-awareness" required>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Painel de Registro -->
+        <div class="panel" id="registerPanel">
+            <h2>CRIA CONTA</h2>
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="register-username">Usuário</label>
+                    <input type="text" id="register-username" placeholder="Digite seu usuário">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">E-mail</label>
+                    <input type="email" id="register-email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha</label>
+                    <input type="password" id="register-password" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-text">
+        <p>TODOS OS DIREITOS RESERVADOS</p>
+    </div>
+
+    <div class="background-text font-effect-fire">
+        <div>BOLBOLBET:</div>
+        <div>A BET</div>
+        <BR></BR>
+        <div>  DA BOL</div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Get the username and password input values
+            var username = document.getElementById('login-username').value;
+            var password = document.getElementById('login-password').value;
+    
+            // Check if the username and password match
+            if (username === 'bol' && password === '2664') {
+                // Redirect to a new page or display a success message
+                window.location.href = './index.html'; // Redirect to success page
+                // Alternatively, you can display a success message
+                // alert('Logado com sucesso');
+            } else {
+                // Display an error message
+                alert('Usuário ou senha inválidos');
+            }
+        });
+    </script>
+</body>
+</html>
